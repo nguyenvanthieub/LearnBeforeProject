@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *viewAlert;
+@property (weak, nonatomic) IBOutlet UIView *slideMenu;
 
 @end
 
@@ -55,11 +56,17 @@
 
 - (void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
     NSLog(@"Right");
+    [UIView animateWithDuration:0.5 animations:^{
+        self.slideMenu.frame = CGRectOffset(self.slideMenu.frame, 320.0, 0.0);
+    }];
 }
 
 
 - (void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
     NSLog(@"Left");
+    [UIView animateWithDuration:0.5 animations:^{
+        self.slideMenu.frame = CGRectOffset(self.slideMenu.frame, -320.0, 0.0);
+    }];
 }
 
 - (void)slideToUpWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
