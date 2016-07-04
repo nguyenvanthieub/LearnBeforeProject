@@ -10,18 +10,64 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *viewAlert;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // click event
+    UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTapGesture:)];
+    [self.viewAlert addGestureRecognizer:singleTapGestureRecognizer];
+    // double click
+    UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
+    doubleTapGestureRecognizer.numberOfTapsRequired = 2;
+//    doubleTapGestureRecognizer.numberOfTouchesRequired = 2;
+    [self.viewAlert addGestureRecognizer:doubleTapGestureRecognizer];
+    // to right
+    UISwipeGestureRecognizer *swipeRightOrange = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToRightWithGestureRecognizer:)];
+    swipeRightOrange.direction = UISwipeGestureRecognizerDirectionRight;
+    // to left
+    UISwipeGestureRecognizer *swipeLeftOrange = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToLeftWithGestureRecognizer:)];
+    swipeLeftOrange.direction = UISwipeGestureRecognizerDirectionLeft;
+    // to up
+    UISwipeGestureRecognizer *swipeUpOrange = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToUpWithGestureRecognizer:)];
+    swipeUpOrange.direction = UISwipeGestureRecognizerDirectionUp;
+    // to down
+    UISwipeGestureRecognizer *swipeDownOrange = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToDownWithGestureRecognizer:)];
+    swipeDownOrange.direction = UISwipeGestureRecognizerDirectionDown;
+    // add gesture recognizer
+    [self.viewAlert addGestureRecognizer:swipeRightOrange];
+    [self.viewAlert addGestureRecognizer:swipeLeftOrange];
+    [self.viewAlert addGestureRecognizer:swipeUpOrange];
+    [self.viewAlert addGestureRecognizer:swipeDownOrange];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer{
+    NSLog(@"Click");
+}
+
+-(void)handleDoubleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer{
+    NSLog(@"Double click");
+}
+
+- (void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    NSLog(@"Right");
+}
+
+
+- (void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    NSLog(@"Left");
+}
+
+- (void)slideToUpWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    NSLog(@"Up");
+}
+
+- (void)slideToDownWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer{
+    NSLog(@"Down");
 }
 
 @end
