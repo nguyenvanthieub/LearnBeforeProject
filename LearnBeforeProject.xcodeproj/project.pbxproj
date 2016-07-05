@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308140BE1D2B92C700B07F7B /* ViewPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308140BD1D2B92C700B07F7B /* ViewPageController.m */; };
 		3095F34B1D2A8F670080F06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3095F34A1D2A8F670080F06C /* main.m */; };
 		3095F34E1D2A8F670080F06C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3095F34D1D2A8F670080F06C /* AppDelegate.m */; };
 		3095F3511D2A8F670080F06C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3095F3501D2A8F670080F06C /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		308140BC1D2B92C700B07F7B /* ViewPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPageController.h; sourceTree = "<group>"; };
+		308140BD1D2B92C700B07F7B /* ViewPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPageController.m; sourceTree = "<group>"; };
 		3095F3461D2A8F660080F06C /* LearnBeforeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBeforeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3095F34A1D2A8F670080F06C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3095F34C1D2A8F670080F06C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				3095F3571D2A8F670080F06C /* LaunchScreen.storyboard */,
 				3095F35A1D2A8F670080F06C /* Info.plist */,
 				3095F3491D2A8F670080F06C /* Supporting Files */,
+				308140BC1D2B92C700B07F7B /* ViewPageController.h */,
+				308140BD1D2B92C700B07F7B /* ViewPageController.m */,
 			);
 			path = LearnBeforeProject;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				3095F3511D2A8F670080F06C /* ViewController.m in Sources */,
 				3095F34E1D2A8F670080F06C /* AppDelegate.m in Sources */,
 				3095F34B1D2A8F670080F06C /* main.m in Sources */,
+				308140BE1D2B92C700B07F7B /* ViewPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
